@@ -14,7 +14,7 @@ class AddAdditionalColumnToKendaraanTable extends Migration
     public function up()
     {
         Schema::table('kendaraan', function (Blueprint $table) {
-            $table->string('no_polisi');
+            $table->string('no_polisi')->nullable();
         });
     }
 
