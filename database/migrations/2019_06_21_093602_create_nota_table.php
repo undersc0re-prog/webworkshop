@@ -16,11 +16,9 @@ class CreateNotaTable extends Migration
         Schema::create('nota', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedSmallInteger('no_nota');
-            $table->unsignedBigInteger('servis_id')->nullable();
+
             $table->date('tgl_nota');
             $table->timestamps();
-
-            $table->foreign('servis_id')->references('id')->on('servis')->onDelete('cascade');
         });
     }
 
